@@ -2,13 +2,13 @@
 
 @section('content')
 <h2>Usuarios</h2>
-	<?php if(is_array($all)): ?>
+	@if(is_array($all))
         <div class="row">
-            <?php foreach($all as $user):?>
+            @foreach($all as $user)
                 <div class="col-md-8">
-                    <?php echo $user['nombre']; ?> <?php echo $user['apellidos']; ?>
+                    {{$user['nombre']}} {{$user['apellidos']}}
                 </div>
-            <?php endforeach; ?>
+            @endforeach
         </div>
-    <?php endif; ?>
+    @endif
 @endsection
