@@ -1,0 +1,14 @@
+@extends('app')
+
+@section('content')
+<h2>Usuarios</h2>
+	<?php if(is_array($all)): ?>
+        <div class="row">
+            <?php foreach($all as $user):?>
+                <div class="col-md-8">
+                    <?php echo $user['nombre']; ?> <?php echo $user['apellidos']; ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+@endsection
